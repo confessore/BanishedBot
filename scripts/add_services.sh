@@ -8,7 +8,7 @@ read -p "BanishedBot Discord Application Token: " discordToken
 
 sudo cp ./services/banishedbot.service ./services/banishedbot.service.backup
 
-sudo sed -i '/BanishedBothDiscordToken=/s/$/'"$discordToken"'/' ./services/banishedbot.service.backup
+sudo sed -i '/BanishedBotDiscordToken=/s/$/'"$discordToken"'/' ./services/banishedbot.service.backup
 
 sudo mv ./services/banishedbot.service.backup /etc/systemd/system/banishedbot.service
 
