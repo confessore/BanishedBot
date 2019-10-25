@@ -3,7 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanishedBot", "BanishedBot\BanishedBot.csproj", "{9F063C02-872F-44D1-9DAB-E1C0E1152800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BanishedBot", "src\BanishedBot\BanishedBot.csproj", "{6E0D011A-D1B1-4FEA-A6F3-4AEED458810C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{49DD2771-7BD7-4F10-B9E9-05EDE139D0CB}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\add_services.sh = scripts\add_services.sh
+		scripts\disable_services.sh = scripts\disable_services.sh
+		scripts\enable_services.sh = scripts\enable_services.sh
+		scripts\remove_services.sh = scripts\remove_services.sh
+		scripts\update.sh = scripts\update.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{1FD5B01A-4861-4819-A6AA-FAE04637B67D}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\services\banishedbot.service = scripts\services\banishedbot.service
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{76D0CC0F-836C-4296-99D1-2DCEB894729B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2EFA604D-88E6-4A8F-9851-18775D7978D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +34,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9F063C02-872F-44D1-9DAB-E1C0E1152800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F063C02-872F-44D1-9DAB-E1C0E1152800}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F063C02-872F-44D1-9DAB-E1C0E1152800}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F063C02-872F-44D1-9DAB-E1C0E1152800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0D011A-D1B1-4FEA-A6F3-4AEED458810C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0D011A-D1B1-4FEA-A6F3-4AEED458810C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0D011A-D1B1-4FEA-A6F3-4AEED458810C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0D011A-D1B1-4FEA-A6F3-4AEED458810C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E0D011A-D1B1-4FEA-A6F3-4AEED458810C} = {2EFA604D-88E6-4A8F-9851-18775D7978D5}
+		{49DD2771-7BD7-4F10-B9E9-05EDE139D0CB} = {76D0CC0F-836C-4296-99D1-2DCEB894729B}
+		{1FD5B01A-4861-4819-A6AA-FAE04637B67D} = {49DD2771-7BD7-4F10-B9E9-05EDE139D0CB}
+		{2EFA604D-88E6-4A8F-9851-18775D7978D5} = {76D0CC0F-836C-4296-99D1-2DCEB894729B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F5E070E-78BE-4805-BA5E-3C8D8D28B3A5}

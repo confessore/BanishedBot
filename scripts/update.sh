@@ -2,10 +2,10 @@
 
 sudo service banishedbot stop
 
-cd /home/orfasanti/banishedbot
+cd /home/$USER/banishedbot
 sudo git pull origin master
 
-cd /home/orfasanti/banishedbot/src/BanishedBot
+cd /home/$USER/banishedbot/src/BanishedBot
 sudo dotnet publish -c Release -o /var/dotnetcore/BanishedBot
 
 sudo service banishedbot start
