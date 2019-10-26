@@ -1,9 +1,10 @@
-﻿namespace BanishedBot.Models
+﻿using Discord;
+
+namespace BanishedBot.Models
 {
     public class Raider
     {
         public string Name { get; set; }
-        //public Role Role { get; set; }
-        //public Class Class { get; set; }
+        public IEmote Role { get; set; }
     }
 }

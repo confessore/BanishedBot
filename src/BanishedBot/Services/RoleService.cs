@@ -1,8 +1,11 @@
-﻿using BanishedBot.Statics;
+﻿using BanishedBot.Enums;
+using BanishedBot.Models;
+using BanishedBot.Statics;
 using Discord;
 using Discord.WebSocket;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,24 +32,47 @@ namespace BanishedBot.Services
 
         async Task ReactionAdded(Cacheable<IUserMessage, ulong> message, ISocketMessageChannel channel, SocketReaction reaction)
         {
-            var msg = await message.GetOrDownloadAsync();
-            foreach (var rctn in msg.Reactions)
+            if (reaction.UserId != client.CurrentUser.Id)
             {
-                foreach (var user in await msg.GetReactionUsersAsync(rctn.Key, 100).FirstOrDefault())
+                var msg = await message.GetOrDownloadAsync();
+                var content = msg.Content.Split(" ").ToList();
+                var index = content.IndexOf("Server");
+                var dt = $"{content[index - 3]} {content[index - 2]} {content[index - 1]}";
+                var format = "dd/MMMM/yyyy hh:mm tt";
+                var raid = new Models.Raid
                 {
-                    if (user.Username != client.CurrentUser.Username)
+                    Name = (Enums.Raid)Enum.Parse(typeof(Enums.Raid), content.Contains("Optional") ? content[1] : content[0]),
+                    DateTime = DateTime.ParseExact(dt, format, CultureInfo.InvariantCulture)
+                };
+                foreach (var rctn in msg.Reactions)
+                {
+                    foreach (var user in await msg.GetReactionUsersAsync(rctn.Key, 100).FirstOrDefault())
                     {
-                        if (!Strings.Reactions.Contains(rctn.Key.Name.ToLower()))
-                            await msg.RemoveReactionAsync(rctn.Key, user);
-                        var role = ParseRole(rctn.Key.Name);
-                        if (Strings.Roles.Contains(role))
+                        if (user.Id != client.CurrentUser.Id)
                         {
-                            var tmp = Guild.Users.FirstOrDefault(x => x.Id == user.Id);
-                            if (!tmp.Roles.Contains(GetGuildRole(Guild, role)))
-                                await ModifyRole(Guild, tmp, role);
+                            var u = Guild.Users.FirstOrDefault(x => x.Id == user.Id);
+                            var raider = new Raider
+                            {
+                                Name = u.Nickname ?? u.Username,
+                                Role = rctn.Key
+                            };
+                            raid.Raiders.Add(raider);
+                            if (!Strings.Reactions.Contains(rctn.Key.Name.ToLower()))
+                                await msg.RemoveReactionAsync(rctn.Key, user);
+                            var role = ParseRole(rctn.Key.Name);
+                            if (Strings.Roles.Contains(role))
+                            {
+                                var tmp = Guild.Users.FirstOrDefault(x => x.Id == user.Id);
+                                if (!tmp.Roles.Contains(GetGuildRole(Guild, role)))
+                                    await ModifyRole(Guild, tmp, role);
+                            }
                         }
                     }
                 }
+                Console.WriteLine(raid.Name);
+                Console.WriteLine(raid.DateTime);
+                foreach (var raider in raid.Raiders)
+                    Console.WriteLine($"{raider.Name} {raider.Role.Name}");
             }
         }
 

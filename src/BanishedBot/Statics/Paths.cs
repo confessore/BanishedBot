@@ -7,5 +7,6 @@ namespace BanishedBot.Statics
         public static string ZG => Directory.GetCurrentDirectory() + Strings.ZG;
         public static string AQR => Directory.GetCurrentDirectory() + Strings.AQR;
         public static string MC => Directory.GetCurrentDirectory() + Strings.MC;
+        public static string MCT => Directory.GetCurrentDirectory() + Strings.MCT;
     }
 }

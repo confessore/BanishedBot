@@ -83,6 +83,16 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] MCT {
+            get {
+                object obj = ResourceManager.GetObject("MCT", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] ZG {
             get {
                 object obj = ResourceManager.GetObject("ZG", resourceCulture);

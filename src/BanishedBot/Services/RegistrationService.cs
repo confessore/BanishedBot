@@ -57,6 +57,8 @@ namespace NashorMatch.Discord.Services
                 await File.WriteAllBytesAsync(Paths.AQR, Resources.AQR);
             if (!File.Exists(Paths.MC))
                 await File.WriteAllBytesAsync(Paths.MC, Resources.MC);
+            if (!File.Exists(Paths.MCT))
+                await File.WriteAllBytesAsync(Paths.MCT, Resources.MCT);
         }
     }
 }
