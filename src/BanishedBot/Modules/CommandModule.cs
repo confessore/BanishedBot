@@ -1,15 +1,10 @@
 ﻿using BanishedBot.Enums;
-using BanishedBot.Properties;
 using BanishedBot.Statics;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
-using NashorMatch.Discord.Services;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BanishedBot.Discord.Modules
@@ -44,7 +39,7 @@ namespace BanishedBot.Discord.Modules
 
         [Command("insult")]
         [Summary("all: got 'em" +
-            "\n >insult)")]
+            "\n >insult")]
         async Task InsultAsync()
         {
             await RemoveCommandMessageAsync();

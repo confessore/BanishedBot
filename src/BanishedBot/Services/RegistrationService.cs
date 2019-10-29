@@ -26,7 +26,7 @@ namespace NashorMatch.Discord.Services
 
         public async Task IntializeRegistrationsAsync()
         {
-            await RegisterEvents();
+            await RegisterServices();
             await RegisterModulesAsync();
             await RegisterResources();
             Console.WriteLine("registration completed!");
@@ -40,10 +40,12 @@ namespace NashorMatch.Discord.Services
                 services);
         }
 
-        Task RegisterEvents()
+        Task RegisterServices()
         {
-            Console.WriteLine("registering events...");
+            Console.WriteLine("registering services...");
+            services.GetRequiredService<BaseService>();
             services.GetRequiredService<EventService>();
+            services.GetRequiredService<ChannelService>();
             services.GetRequiredService<RoleService>();
             return Task.CompletedTask;
         }

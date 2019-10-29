@@ -35,8 +35,11 @@ namespace BanishedBot
         {
             return new ServiceCollection()
                 .AddSingleton(client)
+                .AddSingleton<BaseService>()
                 .AddSingleton<CommandService>()
                 .AddSingleton<RegistrationService>()
+                .AddSingleton<ChannelService>()
+                .AddSingleton<MessageService>()
                 .AddSingleton<RoleService>()
                 .AddSingleton<EventService>()
                 .BuildServiceProvider();
