@@ -1,6 +1,7 @@
 ﻿using BanishedBot.Statics;
 using Discord;
 using Discord.WebSocket;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,14 +20,14 @@ namespace BanishedBot.Services
             this.baseService = baseService;
         }
 
-        public async Task CheckMessages()
+        public async Task CheckMessagesAsync()
         {
-            await DeleteMessages(baseService.RoleChannel);
-            await DeleteMessages(baseService.RaidChannel);
-            await CheckRoleMessage();
+            await DeleteMessagesAsync(baseService.RoleChannel);
+            await DeleteMessagesAsync(baseService.RaidChannel);
+            await CheckRoleMessageAsync();
         }
 
-        async Task CheckRoleMessage()
+        async Task CheckRoleMessageAsync()
         {
             var tmp = baseService.RoleChannel.GetMessagesAsync().Flatten();
             if (await tmp.Count() == 0)
@@ -37,15 +38,15 @@ namespace BanishedBot.Services
             }
         }
 
-        async Task DeleteMessages(ISocketMessageChannel channel)
+        async Task DeleteMessagesAsync(ISocketMessageChannel channel)
         {
             var tmp = channel.GetMessagesAsync().Flatten();
-            if (await tmp.Count() > 0)
-                await tmp.ForEachAsync(async x =>
-                {
-                    if (x.Author.Id != client.CurrentUser.Id)
-                        await x.DeleteAsync();
-                });
+            await tmp.ForEachAsync(async x =>
+            {
+                var admin = baseService.Guild.Users.FirstOrDefault(y => y.Id == x.Author.Id).GuildPermissions.Administrator
+                if (!admin)
+                    await x.DeleteAsync();
+            });
         }
     }
 }

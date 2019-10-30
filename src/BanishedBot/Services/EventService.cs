@@ -43,7 +43,7 @@ namespace BanishedBot.Discord.Services
         async Task Ready()
         {
             await channelService.CheckChannelsAsync();
-            await messageService.CheckMessages();
+            await messageService.CheckMessagesAsync();
         }
 
         Task Disconnected(Exception e)
@@ -72,7 +72,7 @@ namespace BanishedBot.Discord.Services
         {
             if (channel.Name == Strings.RoleChannel)
             {
-                await messageService.CheckMessages();
+                await messageService.CheckMessagesAsync();
                 var msg = await message.GetOrDownloadAsync();
                 var raid = new Raid();
                 foreach (var rctn in msg.Reactions)
