@@ -51,8 +51,10 @@ namespace BanishedBot.Services
         public SocketRole GetGuildRole(SocketGuild guild, string name) =>
             client.GetGuild(guild.Id).Roles.FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
 
-        public ISocketMessageChannel Channel =>
+        public ISocketMessageChannel RoleChannel =>
             Guild.TextChannels.FirstOrDefault(x => x.Name == Strings.RoleChannel);
+        public ISocketMessageChannel RaidChannel =>
+            Guild.TextChannels.FirstOrDefault(x => x.Name == Strings.RaidChannel);
 
         public SocketGuild Guild =>
             client.Guilds.FirstOrDefault(x => x.Name == Strings.GuildName);

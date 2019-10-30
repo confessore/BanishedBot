@@ -98,16 +98,7 @@ namespace BanishedBot.Discord.Modules
         Emote GetEmote(string name) =>
             Guild.Emotes.Where(x => x.Name.ToLower() == name.ToLower()).FirstOrDefault();
 
-        SocketGuildUser GetGuildUser(string name) =>
-            client.GetGuild(Context.Guild.Id).Users.Where(x => (x.Nickname ?? x.Username).ToLower() == name.ToLower()).FirstOrDefault();
-
         SocketGuild Guild =>
             client.GetGuild(Context.Guild.Id);
-
-        SocketGuildUser SocketGuildUser =>
-            client.GetGuild(Context.Guild.Id).GetUser(Context.User.Id);
-
-        bool IsVerified =>
-            client.GetGuild(Context.Guild.Id).GetUser(Context.User.Id).Roles.Any(x => x.Name.ToLower().Contains("verified"));
     }
 }
