@@ -3,14 +3,14 @@
     public static class Strings
     {
         public static string GuildName => "Banished";
-        public static string RoleChannel => "role-select";
+        public static string RoleChannel => $"🎯role-select";
         public static string RaidChannel => "raid-signups";
         public static string ZG => "//ZG.jpg";
         public static string AQR => "//AQR.jpg";
         public static string MC => "//MC.jpg";
         public static string MCT => "//MCT.jpg";
 
-        public static string[] Roles => 
+        public static string[] Roles =>
             new string[]
             {
                 "druid",
