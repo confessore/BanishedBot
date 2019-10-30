@@ -4,7 +4,7 @@
     {
         public static string GuildName => "Banished";
         public static string RoleChannel => $"🎯role-select";
-        public static string RaidChannel => "raid-signups";
+        public static string RaidChannel => "📆raid-signups";
         public static string ZG => "//ZG.jpg";
         public static string AQR => "//AQR.jpg";
         public static string MC => "//MC.jpg";
