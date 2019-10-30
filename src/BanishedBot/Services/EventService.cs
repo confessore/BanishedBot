@@ -70,7 +70,7 @@ namespace BanishedBot.Discord.Services
 
         async Task ReactionAdded(Cacheable<IUserMessage, ulong> message, ISocketMessageChannel channel, SocketReaction reaction)
         {
-            if (channel.Name == Strings.RoleChannel)
+            if (channel == baseService.RoleChannel)
             {
                 await messageService.CheckMessagesAsync();
                 var msg = await message.GetOrDownloadAsync();
