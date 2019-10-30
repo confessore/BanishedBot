@@ -43,7 +43,7 @@ namespace BanishedBot.Services
             var tmp = channel.GetMessagesAsync().Flatten();
             await tmp.ForEachAsync(async x =>
             {
-                var admin = baseService.Guild.Users.FirstOrDefault(y => y.Id == x.Author.Id).GuildPermissions.Administrator
+                var admin = baseService.Guild.Users.FirstOrDefault(y => y.Id == x.Author.Id).GuildPermissions.Administrator;
                 if (!admin)
                     await x.DeleteAsync();
             });
