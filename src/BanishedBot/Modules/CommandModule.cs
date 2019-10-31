@@ -25,6 +25,8 @@ namespace BanishedBot.Discord.Modules
             this.commands = commands;
         }
 
+        Random random = new Random();
+
         [Command("help")]
         [Summary("all: displays available commands" +
             "\n >help")]
@@ -71,16 +73,22 @@ namespace BanishedBot.Discord.Modules
             switch (raid)
             {
                 case Instance.ZulGurub:
-                    path = Paths.ZG;
+                    path = Paths.ZG(random.Next(0, 2));
                     break;
                 case Instance.AhnQirajRuins:
-                    path = Paths.AQR;
+                    path = Paths.AQR(random.Next(0, 1));
                     break;
                 case Instance.MoltenCore:
                     if (!trash)
-                        path = Paths.MC;
+                        path = Paths.MC(random.Next(0, 2));
                     else
-                        path = Paths.MCT;
+                        path = Paths.MCT(0);
+                    break;
+                case Instance.Onyxia:
+                    path = Paths.ONY(0);
+                    break;
+                case Instance.BlackwingLair:
+                    path = Paths.BWL(0);
                     break;
                 default:
                     path = string.Empty;

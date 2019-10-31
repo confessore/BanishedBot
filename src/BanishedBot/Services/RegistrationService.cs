@@ -52,14 +52,33 @@ namespace BanishedBot.Discord.Services
         async Task RegisterResources()
         {
             Console.WriteLine("registering resources...");
-            if (!File.Exists(Paths.ZG))
-                await File.WriteAllBytesAsync(Paths.ZG, Resources.ZG);
-            if (!File.Exists(Paths.AQR))
-                await File.WriteAllBytesAsync(Paths.AQR, Resources.AQR);
-            if (!File.Exists(Paths.MC))
-                await File.WriteAllBytesAsync(Paths.MC, Resources.MC);
-            if (!File.Exists(Paths.MCT))
-                await File.WriteAllBytesAsync(Paths.MCT, Resources.MCT);
+            if (!File.Exists(Paths.ZG(0)))
+                await File.WriteAllBytesAsync(Paths.ZG(0), Resources.ZG0);
+            if (!File.Exists(Paths.ZG(1)))
+                await File.WriteAllBytesAsync(Paths.ZG(1), Resources.ZG1);
+            if (!File.Exists(Paths.ZG(2)))
+                await File.WriteAllBytesAsync(Paths.ZG(2), Resources.ZG2);
+
+            if (!File.Exists(Paths.AQR(0)))
+                await File.WriteAllBytesAsync(Paths.AQR(0), Resources.AQR0);
+            if (!File.Exists(Paths.AQR(1)))
+                await File.WriteAllBytesAsync(Paths.AQR(0), Resources.AQR1);
+
+            if (!File.Exists(Paths.MCT(0)))
+                await File.WriteAllBytesAsync(Paths.MCT(0), Resources.MCT0);
+
+            if (!File.Exists(Paths.MC(0)))
+                await File.WriteAllBytesAsync(Paths.MC(0), Resources.MC0);
+            if (!File.Exists(Paths.MC(1)))
+                await File.WriteAllBytesAsync(Paths.MC(1), Resources.MC1);
+            if (!File.Exists(Paths.MC(2)))
+                await File.WriteAllBytesAsync(Paths.MC(2), Resources.MC2);
+
+            if (!File.Exists(Paths.ONY(0)))
+                await File.WriteAllBytesAsync(Paths.ONY(0), Resources.ONY0);
+
+            if (!File.Exists(Paths.BWL(0)))
+                await File.WriteAllBytesAsync(Paths.BWL(0), Resources.BWL0);
         }
     }
 }

@@ -63,9 +63,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] AQR {
+        internal static byte[] AQR0 {
             get {
-                object obj = ResourceManager.GetObject("AQR", resourceCulture);
+                object obj = ResourceManager.GetObject("AQR0", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] MC {
+        internal static byte[] AQR1 {
             get {
-                object obj = ResourceManager.GetObject("MC", resourceCulture);
+                object obj = ResourceManager.GetObject("AQR1", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] MCT {
+        internal static byte[] BWL0 {
             get {
-                object obj = ResourceManager.GetObject("MCT", resourceCulture);
+                object obj = ResourceManager.GetObject("BWL0", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -93,9 +93,89 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ZG {
+        internal static byte[] MC0 {
             get {
-                object obj = ResourceManager.GetObject("ZG", resourceCulture);
+                object obj = ResourceManager.GetObject("MC0", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MC1 {
+            get {
+                object obj = ResourceManager.GetObject("MC1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MC2 {
+            get {
+                object obj = ResourceManager.GetObject("MC2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MCT0 {
+            get {
+                object obj = ResourceManager.GetObject("MCT0", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ONY0 {
+            get {
+                object obj = ResourceManager.GetObject("ONY0", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ONY1 {
+            get {
+                object obj = ResourceManager.GetObject("ONY1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ZG0 {
+            get {
+                object obj = ResourceManager.GetObject("ZG0", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ZG1 {
+            get {
+                object obj = ResourceManager.GetObject("ZG1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ZG2 {
+            get {
+                object obj = ResourceManager.GetObject("ZG2", resourceCulture);
                 return ((byte[])(obj));
             }
         }
