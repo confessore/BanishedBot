@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BanishedBot.Discord.Modules
 {
-    internal class CommandModule : ModuleBase<SocketCommandContext>
+    public class CommandModule : ModuleBase<SocketCommandContext>
     {
         readonly IServiceProvider services;
         readonly DiscordSocketClient client;
@@ -23,9 +23,10 @@ namespace BanishedBot.Discord.Modules
             this.services = services;
             this.client = client;
             this.commands = commands;
+            random = new Random();
         }
 
-        Random random = new Random();
+        readonly Random random;
 
         [Command("help")]
         [Summary("all: displays available commands" +
