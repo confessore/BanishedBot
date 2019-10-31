@@ -118,40 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="AQR0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="AQR0.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AQR0.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="AQR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="AQR1.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AQR1.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="BWL0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="BWL0.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BWL0.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MC0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="MC0.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MC0.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="MC1.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MC1.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MC2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="MC2.webp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MC2.webp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MCT0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="MCT0.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MCT0.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ONY0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="ONY0.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ONY0.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ONY1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="ONY1.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ONY1.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ZG0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="String" xml:space="preserve">
+    <value>.Replace('_', '.')</value>
+  </data>
+  <data name="ZG0.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ZG0.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ZG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ZG1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ZG1.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ZG1.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ZG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="ZG2.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ZG2.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

@@ -63,9 +63,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] AQR0 {
+        internal static byte[] AQR0_jpg {
             get {
-                object obj = ResourceManager.GetObject("AQR0", resourceCulture);
+                object obj = ResourceManager.GetObject("AQR0.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] AQR1 {
+        internal static byte[] AQR1_jpg {
             get {
-                object obj = ResourceManager.GetObject("AQR1", resourceCulture);
+                object obj = ResourceManager.GetObject("AQR1.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] BWL0 {
+        internal static byte[] BWL0_jpg {
             get {
-                object obj = ResourceManager.GetObject("BWL0", resourceCulture);
+                object obj = ResourceManager.GetObject("BWL0.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] MC0 {
+        internal static byte[] MC0_jpg {
             get {
-                object obj = ResourceManager.GetObject("MC0", resourceCulture);
+                object obj = ResourceManager.GetObject("MC0.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] MC1 {
+        internal static byte[] MC1_jpg {
             get {
-                object obj = ResourceManager.GetObject("MC1", resourceCulture);
+                object obj = ResourceManager.GetObject("MC1.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] MC2 {
+        internal static byte[] MC2_webp {
             get {
-                object obj = ResourceManager.GetObject("MC2", resourceCulture);
+                object obj = ResourceManager.GetObject("MC2.webp", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] MCT0 {
+        internal static byte[] MCT0_jpg {
             get {
-                object obj = ResourceManager.GetObject("MCT0", resourceCulture);
+                object obj = ResourceManager.GetObject("MCT0.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ONY0 {
+        internal static byte[] ONY0_jpg {
             get {
-                object obj = ResourceManager.GetObject("ONY0", resourceCulture);
+                object obj = ResourceManager.GetObject("ONY0.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -143,9 +143,28 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ONY1 {
+        internal static byte[] ONY1_jpg {
             get {
-                object obj = ResourceManager.GetObject("ONY1", resourceCulture);
+                object obj = ResourceManager.GetObject("ONY1.jpg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .Replace(&apos;_&apos;, &apos;.&apos;).
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ZG0_jpg {
+            get {
+                object obj = ResourceManager.GetObject("ZG0.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -153,9 +172,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ZG0 {
+        internal static byte[] ZG1_jpg {
             get {
-                object obj = ResourceManager.GetObject("ZG0", resourceCulture);
+                object obj = ResourceManager.GetObject("ZG1.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -163,19 +182,9 @@ namespace BanishedBot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ZG1 {
+        internal static byte[] ZG2_png {
             get {
-                object obj = ResourceManager.GetObject("ZG1", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] ZG2 {
-            get {
-                object obj = ResourceManager.GetObject("ZG2", resourceCulture);
+                object obj = ResourceManager.GetObject("ZG2.png", resourceCulture);
                 return ((byte[])(obj));
             }
         }

@@ -1,10 +1,14 @@
 ﻿using BanishedBot.Enums;
+using BanishedBot.Properties;
 using BanishedBot.Statics;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 using System;
+using System.Collections;
 using System.Linq;
+using System.Resources;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BanishedBot.Discord.Modules
@@ -70,26 +74,33 @@ namespace BanishedBot.Discord.Modules
         {
             await RemoveCommandMessageAsync();
             var dt = DateTime.Parse($"{month}/{day}/{year} {hour}:{minute}").ToString("dd/MMMM/yyyy hh:mm tt 'Server Time'");
+            int r;
             string path;
             switch (raid)
             {
                 case Instance.ZulGurub:
-                    path = Paths.ZG(random.Next(0, 2));
+                    r = random.Next(0, 3);
+                    path = Paths.PathBuilder(Strings.Resources.FirstOrDefault(x => x.Contains($"ZG{r}")));
                     break;
                 case Instance.AhnQirajRuins:
-                    path = Paths.AQR(random.Next(0, 1));
+                    r = random.Next(0, 2);
+                    path = Paths.PathBuilder(Strings.Resources.FirstOrDefault(x => x.Contains($"AQR{r}")));
                     break;
                 case Instance.MoltenCore:
                     if (!trash)
-                        path = Paths.MC(random.Next(0, 2));
+                    {
+                        r = random.Next(0, 3);
+                        path = Paths.PathBuilder(Strings.Resources.FirstOrDefault(x => x.Contains($"MC{r}")));
+                    }
                     else
-                        path = Paths.MCT(0);
+                        path = Paths.PathBuilder(Strings.Resources.FirstOrDefault(x => x.Contains($"MCT")));
                     break;
                 case Instance.Onyxia:
-                    path = Paths.ONY(random.Next(0, 1));
+                    r = random.Next(0, 2);
+                    path = Paths.PathBuilder(Strings.Resources.FirstOrDefault(x => x.Contains($"ONY{r}")));
                     break;
                 case Instance.BlackwingLair:
-                    path = Paths.BWL(0);
+                    path = Paths.PathBuilder(Strings.Resources.FirstOrDefault(x => x.Contains($"BWL")));
                     break;
                 default:
                     path = string.Empty;

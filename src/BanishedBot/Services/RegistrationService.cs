@@ -4,8 +4,10 @@ using BanishedBot.Statics;
 using Discord.Commands;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Collections;
 using System.IO;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BanishedBot.Discord.Services
@@ -25,9 +27,9 @@ namespace BanishedBot.Discord.Services
 
         public async Task IntializeRegistrationsAsync()
         {
+            await RegisterResources();
             await RegisterServices();
             await RegisterModulesAsync();
-            await RegisterResources();
             Console.WriteLine("registration completed!");
         }
 
@@ -52,35 +54,28 @@ namespace BanishedBot.Discord.Services
         async Task RegisterResources()
         {
             Console.WriteLine("registering resources...");
-            if (!File.Exists(Paths.ZG(0)))
-                await File.WriteAllBytesAsync(Paths.ZG(0), Resources.ZG0);
-            if (!File.Exists(Paths.ZG(1)))
-                await File.WriteAllBytesAsync(Paths.ZG(1), Resources.ZG1);
-            if (!File.Exists(Paths.ZG(2)))
-                await File.WriteAllBytesAsync(Paths.ZG(2), Resources.ZG2);
+            await CheckFileAsync(nameof(Resources.ZG0_jpg), Resources.ZG0_jpg);
+            await CheckFileAsync(nameof(Resources.ZG1_jpg), Resources.ZG1_jpg);
+            await CheckFileAsync(nameof(Resources.ZG2_png), Resources.ZG2_png);
+            await CheckFileAsync(nameof(Resources.AQR0_jpg), Resources.AQR0_jpg);
+            await CheckFileAsync(nameof(Resources.AQR1_jpg), Resources.AQR1_jpg);
+            await CheckFileAsync(nameof(Resources.MCT0_jpg), Resources.MCT0_jpg);
+            await CheckFileAsync(nameof(Resources.MC0_jpg), Resources.MC0_jpg);
+            await CheckFileAsync(nameof(Resources.MC1_jpg), Resources.MC1_jpg);
+            await CheckFileAsync(nameof(Resources.MC2_webp), Resources.MC2_webp);
+            await CheckFileAsync(nameof(Resources.ONY0_jpg), Resources.ONY0_jpg);
+            await CheckFileAsync(nameof(Resources.ONY1_jpg), Resources.ONY1_jpg);
+            await CheckFileAsync(nameof(Resources.BWL0_jpg), Resources.BWL0_jpg);
+            var set = Resources.ResourceManager.GetResourceSet(Thread.CurrentThread.CurrentCulture, false, true);
+            foreach (DictionaryEntry name in set)
+                Strings.Resources.Add(name.Key.ToString());
+        }
 
-            if (!File.Exists(Paths.AQR(0)))
-                await File.WriteAllBytesAsync(Paths.AQR(0), Resources.AQR0);
-            if (!File.Exists(Paths.AQR(1)))
-                await File.WriteAllBytesAsync(Paths.AQR(0), Resources.AQR1);
-
-            if (!File.Exists(Paths.MCT(0)))
-                await File.WriteAllBytesAsync(Paths.MCT(0), Resources.MCT0);
-
-            if (!File.Exists(Paths.MC(0)))
-                await File.WriteAllBytesAsync(Paths.MC(0), Resources.MC0);
-            if (!File.Exists(Paths.MC(1)))
-                await File.WriteAllBytesAsync(Paths.MC(1), Resources.MC1);
-            if (!File.Exists(Paths.MC(2)))
-                await File.WriteAllBytesAsync(Paths.MC(2), Resources.MC2);
-
-            if (!File.Exists(Paths.ONY(0)))
-                await File.WriteAllBytesAsync(Paths.ONY(0), Resources.ONY0);
-            if (!File.Exists(Paths.ONY(1)))
-                await File.WriteAllBytesAsync(Paths.ONY(1), Resources.ONY1);
-
-            if (!File.Exists(Paths.BWL(0)))
-                await File.WriteAllBytesAsync(Paths.BWL(0), Resources.BWL0);
+        async Task CheckFileAsync(string filename, byte[] file)
+        {
+            var path = Paths.PathBuilder(filename);
+            if (!File.Exists(path))
+                await File.WriteAllBytesAsync(path, file);
         }
     }
 }
