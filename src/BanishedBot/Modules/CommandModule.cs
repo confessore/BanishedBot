@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BanishedBot.Discord.Modules
 {
-    public class CommandModule : ModuleBase<SocketCommandContext>
+    internal class CommandModule : ModuleBase<SocketCommandContext>
     {
         readonly IServiceProvider services;
         readonly DiscordSocketClient client;

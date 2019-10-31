@@ -4,7 +4,6 @@ using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
-using NashorMatch.Discord.Services;
 using System;
 using System.Threading.Tasks;
 

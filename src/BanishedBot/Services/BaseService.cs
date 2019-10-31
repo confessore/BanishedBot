@@ -55,7 +55,8 @@ namespace BanishedBot.Services
             Guild.TextChannels.FirstOrDefault(x => x.Name == Strings.RoleChannel);
         public ISocketMessageChannel RaidChannel =>
             Guild.TextChannels.FirstOrDefault(x => x.Name == Strings.RaidChannel);
-
+        public ISocketMessageChannel OutputChannel =>
+            Guild.TextChannels.FirstOrDefault(x => x.Name == Strings.OutputChannel);
         public SocketGuild Guild =>
             client.Guilds.FirstOrDefault(x => x.Name == Strings.GuildName);
     }

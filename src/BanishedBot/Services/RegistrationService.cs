@@ -1,5 +1,4 @@
-﻿using BanishedBot.Discord.Services;
-using BanishedBot.Properties;
+﻿using BanishedBot.Properties;
 using BanishedBot.Services;
 using BanishedBot.Statics;
 using Discord.Commands;
@@ -9,7 +8,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace NashorMatch.Discord.Services
+namespace BanishedBot.Discord.Services
 {
     internal class RegistrationService
     {

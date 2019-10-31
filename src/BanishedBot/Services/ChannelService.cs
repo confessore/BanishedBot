@@ -24,6 +24,8 @@ namespace BanishedBot.Services
                 await baseService.Guild.CreateTextChannelAsync(Strings.RoleChannel);
             if (!baseService.Guild.TextChannels.Any(x => x.Name == Strings.RaidChannel))
                 await baseService.Guild.CreateTextChannelAsync(Strings.RaidChannel);
+            if (!baseService.Guild.TextChannels.Any(x => x.Name == Strings.OutputChannel))
+                await baseService.Guild.CreateTextChannelAsync(Strings.OutputChannel);
         }
     }
 }
