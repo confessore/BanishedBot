@@ -76,6 +76,8 @@ namespace BanishedBot.Discord.Services
 
             if (!File.Exists(Paths.ONY(0)))
                 await File.WriteAllBytesAsync(Paths.ONY(0), Resources.ONY0);
+            if (!File.Exists(Paths.ONY(1)))
+                await File.WriteAllBytesAsync(Paths.ONY(1), Resources.ONY1);
 
             if (!File.Exists(Paths.BWL(0)))
                 await File.WriteAllBytesAsync(Paths.BWL(0), Resources.BWL0);

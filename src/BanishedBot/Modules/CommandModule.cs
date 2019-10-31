@@ -85,7 +85,7 @@ namespace BanishedBot.Discord.Modules
                         path = Paths.MCT(0);
                     break;
                 case Instance.Onyxia:
-                    path = Paths.ONY(0);
+                    path = Paths.ONY(random.Next(0, 1));
                     break;
                 case Instance.BlackwingLair:
                     path = Paths.BWL(0);
