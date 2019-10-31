@@ -18,3 +18,7 @@
 		1. Under 'System Variables', click the 'New' button
 		1. Enter 'BanishedBotDiscordToken' for 'Variable name'
 		1. Enter the Discord Application Token for 'Variable value'
+		1. Click the 'Ok' button
+		1. Click the 'Ok' button
+		1. Click the 'Ok' button
+		1. Log out of the current user profile or restart your computer
