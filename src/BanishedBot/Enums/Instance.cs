@@ -1,6 +1,6 @@
 ﻿namespace BanishedBot.Enums
 {
-    public enum Raid
+    public enum Instance
     {
         ZulGurub,
         AhnQirajRuins,

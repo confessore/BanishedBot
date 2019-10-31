@@ -63,20 +63,20 @@ namespace BanishedBot.Discord.Modules
             "\n >create 0 20 25 10 2019 2 false" +
             "\n >create 0 20 25 10 2019 2 false true" +
             "\n raid: 0 ZG, 1 AQ20, 2 MC, 3 BWL, 4 DoN, 5 AQ40, 6 Naxx")]
-        async Task CreateAsync(int minute, int hour, int day, int month, int year, Raid raid, bool optional = false, bool trash = false)
+        async Task CreateAsync(int minute, int hour, int day, int month, int year, Instance raid, bool optional = false, bool trash = false)
         {
             await RemoveCommandMessageAsync();
             var dt = DateTime.Parse($"{month}/{day}/{year} {hour}:{minute}").ToString("dd/MMMM/yyyy hh:mm tt 'Server Time'");
             string path;
             switch (raid)
             {
-                case Raid.ZulGurub:
+                case Instance.ZulGurub:
                     path = Paths.ZG;
                     break;
-                case Raid.AhnQirajRuins:
+                case Instance.AhnQirajRuins:
                     path = Paths.AQR;
                     break;
-                case Raid.MoltenCore:
+                case Instance.MoltenCore:
                     if (!trash)
                         path = Paths.MC;
                     else
